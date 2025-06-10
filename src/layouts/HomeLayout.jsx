@@ -5,7 +5,10 @@ export default function HomeLayout({ children }) {
     <>
       <Header />
       {children}
-      <Footer />
+      <Footer
+        previous={{ url: "/blog", label: "Blog" }}
+        next={{ url: "/research", label: "Research" }}
+      />
     </>
   );
 }
