@@ -1,1 +1,35 @@
 @import "tailwindcss";
+@theme {
+  --animate-wiggle: wiggle 0.8s ease-out forwards;
+  --animate-fadeIn: fadeIn 0.8s ease-out forwards;
+  --animate-fadeUp: fadeUp 1s ease-out forwards;
+  @keyframes wiggle {
+    0% {
+    transform: translateX(50px);
+    opacity: 0;
+}
+100% {
+    transform: translateX(0);
+    opacity: 1;
+}
+  }
+  @keyframes fadeIn {
+    0% {
+    transform: translateY(50px);
+    opacity: 0;
+}
+100% {
+    transform: translateY(0);
+    opacity: 1;
+}
+  }
+   @keyframes fadeUp {
+0% {
+    opacity: 0;
+}
+
+100% {
+    opacity: 1;
+}
+  }
+}

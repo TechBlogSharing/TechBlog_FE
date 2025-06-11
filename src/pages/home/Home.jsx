@@ -7,11 +7,12 @@ export default function HomePage() {
   const body =
     "After 120 minutes, penalties were needed to decide the winner of the 2025 UEFA Nations League final between Portugal and Spain in front of 65,852 fans at Munich’s Allianz Arena. Martin Zubimendi (21’) and Mikel Oyarzabal (45’) had scored for Spain, and Nuno Mendes (26’) and Cristiano Ronaldo (61’) were the scorers for Portugal in what was a tightly contested affair.";
   const but = "Read more";
+  const url = "/member"
   return (
     <>
       <div className="min-h-screen bg-gradient-to-b from-[#0f6cbf] to-[#000066] text-white  ">
-        <div className="flex gap-[30px]">
-          <div className="mt-[50px] ml-[50px] w-[800px]">
+        <div className="flex gap-[30px] justify-center ">
+          <div className="mt-[50px] ml-[50px] w-[800px] animate-fadeIn">
             <h1 className="text-[40px] font-bold ">
               Knowledge Sharing Repository
             </h1>
@@ -28,14 +29,16 @@ export default function HomePage() {
               </button>
             </div>
           </div>
+          <div className="animate-wiggle">
           <img
             src={ronaldo}
-            className="perspective(1000px) w-[600px] h-[300px] rounded-lg shadow-lg mt-[50px] shadow-2xl object-cover
+            className=" perspective(1000px) w-[600px] h-[300px] rounded-lg mt-[50px] mr-[50px] shadow-2xl object-cover
               transform transition-transform duration-600 skew-y-0 hover:-skew-y-2 "
           />
-        </div>
+          </div>
+          </div>
 
-        <div className="flex flex-col items-center mt-[50px] gap-[20px]">
+        <div className="animate-fadeUp flex flex-col items-center mt-[50px] gap-[20px]">
           <h1 className="text-white text-[20px] font-semibold rounded-full shadow-xl bg-[#3366FF] px-5 py-2">
             WHAT WE DO
           </h1>
@@ -45,7 +48,15 @@ export default function HomePage() {
           </h1>
         </div>
 
-        <div className="flex gap-[50px] mr-[20px] ml-[20px] mt-[50px] justify-center">
+        <div className="animate-fadeUp flex gap-[50px] mr-[20px] ml-[20px] mt-[50px] justify-center">
+          <Card
+              img= {ronaldoCard}
+              title= {title}
+              body= {body}
+              but= {but}
+              url = {url}
+            
+          />
           <Card
               img= {ronaldoCard}
               title= {title}
@@ -53,8 +64,13 @@ export default function HomePage() {
               but= {but}
             
           />
-          <Card />
-          <Card />
+          <Card
+              img= {ronaldoCard}
+              title= {title}
+              body= {body}
+              but= {but}
+            
+          />
         </div>
       </div>
     </>
