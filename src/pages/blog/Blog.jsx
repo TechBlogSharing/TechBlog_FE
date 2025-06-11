@@ -1,8 +1,8 @@
 import { useEffect, useRef } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { setShowScrollTop } from "../../store/blogSllice";
-import Sidebar from "./Sidebar";
 import Content from "./Content";
+import Sidebar from "./Sidebar";
 
 const darkTheme = "bg-[#2E2E2E] text-white";
 const lightTheme = "bg-white text-black";
@@ -23,10 +23,10 @@ export default function BlogPage() {
     window.addEventListener("scroll", handleScrollTop);
 
     return () => window.removeEventListener("scroll", handleScrollTop);
-  }, [window.scrollY]);
+  }, []);
   return (
     <div className={theme === "dark" ? darkTheme : lightTheme}>
-      <div className="flex">
+      <div className="flex px-[80px] py-[30px]">
         <Sidebar />
         <Content />
       </div>

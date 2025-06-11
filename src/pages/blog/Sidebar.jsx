@@ -1,13 +1,29 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setSelectedCategory } from "../../store/blogSllice";
+import { useEffect, useRef } from "react";
 
 const categories = ["Blog", "Dev", "Product Management", "UX Design"];
 export default function Sidebar() {
   const selectedCategory = useSelector((state) => state.blog.selectedCategory);
   const theme = useSelector((state) => state.blog.theme);
   const dispatch = useDispatch();
+  const sideBar = useRef();
+  const handleSticky = () => {
+    if (window.scrollY < 85) {
+      sideBar.current.style.position = "static";
+    } else {
+      sideBar.current.style.position = "fixed";
+    }
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", handleSticky);
+    return () => {
+      window.removeEventListener("scroll", handleSticky);
+    };
+  }, []);
   return (
-      <div className="w-[350px] p-[20px]">
+    <div className="flex flex-1  py-[20px] px-[20px]">
+      <div className="w-[350px] top-[95px]" ref={sideBar}>
         {categories.map((category, index) => {
           return (
             <div
@@ -25,6 +41,7 @@ export default function Sidebar() {
             </div>
           );
         })}
+      </div>
     </div>
   );
 }
