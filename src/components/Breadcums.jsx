@@ -11,8 +11,8 @@ const links = [
     path: "/blog",
   },
   {
-    label: "Bloged",
-    path: "/bloged",
+    label: "Member",
+    path: "/member",
   },
 ];
 const activeLinkStyle = "";

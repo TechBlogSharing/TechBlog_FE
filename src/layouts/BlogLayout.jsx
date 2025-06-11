@@ -9,7 +9,10 @@ export default function BlogLayout({ children }) {
       <Header />
       <BreadCums />
       {children}
-      <Footer />
+      <Footer
+        previous={{ url: "/", label: "Home" }}
+        next={{ url: "/member", label: "Member" }}
+      />
     </>
   );
 }
