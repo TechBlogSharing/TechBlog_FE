@@ -2,9 +2,11 @@
 
 import BlogLayout from "../layouts/BlogLayout";
 import HomeLayout from "../layouts/HomeLayout";
+import IntroduceLayout from "../layouts/IntroduceLayout"
 import BlogPage from "../pages/blog/Blog";
 import HomePage from "../pages/home/Home";
 import PostPage from "../pages/post/PostPage";
+import IntroducePage from "../pages/introduce/Introduce"
 
 export const routers = [
   {
@@ -21,5 +23,10 @@ export const routers = [
     path:"/post",
     component:PostPage,
     layout:null
+  },
+  {
+    path:"/introduce",
+    component:IntroducePage,
+    layout: IntroduceLayout
   }
 ];
