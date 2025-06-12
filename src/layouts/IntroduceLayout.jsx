@@ -8,7 +8,7 @@ export default function HomeLayout({ children }) {
       <BreadCums/>
       {children}
       <Footer
-        next={{ url: "/blog", label: "Blog" }}
+        previous={{ url: "/member", label: "Member" }}
       />
     </>
   );

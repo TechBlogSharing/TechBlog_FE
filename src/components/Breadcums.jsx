@@ -14,6 +14,10 @@ const links = [
     label: "Member",
     path: "/member",
   },
+  {
+    label: "About me",
+    path: "/introduce"
+  }
 ];
 const activeLinkStyle = "";
 const inActiveLinkStyle = "opacity-[.67] hover:opacity-[1]";
