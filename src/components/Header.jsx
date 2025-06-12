@@ -45,7 +45,7 @@ export default function Header() {
       </div>
       {showScrollTop && (
         <button
-          className="flex items-center justify-center gap-[10px] absolute top-[100px] left-[50%] -translate-x-[140px] bg-white py-[12px] px-[15px] rounded-full shadow-2xl cursor-pointer hover:bg-[#0f6cbf] hover:text-white transition-all duration-150"
+          className="flex items-center justify-center gap-[10px] absolute top-[100px] left-[50%] -translate-x-[50%] bg-white py-[12px] px-[15px] rounded-full shadow-2xl cursor-pointer hover:bg-[#0f6cbf] hover:text-white transition-all duration-150"
           onClick={() => window.scrollTo(0, 0)}
         >
           <FaArrowUp />
