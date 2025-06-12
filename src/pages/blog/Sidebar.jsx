@@ -22,8 +22,8 @@ export default function Sidebar() {
     };
   }, []);
   return (
-    <div className="flex flex-1  py-[20px] px-[20px]">
-      <div className="w-[350px] top-[95px]" ref={sideBar}>
+    <div className="w-[350px] py-[20px] px-[20px]">
+      <div className="w-[300px] top-[95px] mr-[10px]" ref={sideBar}>
         {categories.map((category, index) => {
           return (
             <div

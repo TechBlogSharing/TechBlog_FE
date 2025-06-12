@@ -1,5 +1,6 @@
 import Markdown from "react-markdown";
 import { useState, useEffect } from "react";
+import ReactDom from "react-dom"
 export default function Post() {
   const [content, setContent] = useState("");
   useEffect(() => {
@@ -9,5 +10,5 @@ export default function Post() {
       .then((res) => res.text())
       .then((text) => setContent(text));
   }, []);
-  return <Markdown>{content}</Markdown>;
+  ReactDom.render(<ReactMarkdown># Hello, *world*!</ReactMarkdown>, document.body)
 }
