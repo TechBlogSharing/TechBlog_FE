@@ -22,7 +22,7 @@ export const routers = [
   {
     path:"/post",
     component:PostPage,
-    layout:null
+    layout:BlogLayout
   },
   {
     path:"/introduce",
