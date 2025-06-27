@@ -2,11 +2,12 @@
 
 import BlogLayout from "../layouts/BlogLayout";
 import HomeLayout from "../layouts/HomeLayout";
-import IntroduceLayout from "../layouts/IntroduceLayout"
+import IntroduceLayout from "../layouts/IntroduceLayout";
 import BlogPage from "../pages/blog/Blog";
 import HomePage from "../pages/home/Home";
 import PostPage from "../pages/post/PostPage";
-import IntroducePage from "../pages/introduce/Introduce"
+import IntroducePage from "../pages/introduce/Introduce";
+import Member from "../pages/member/Member";
 
 export const routers = [
   {
@@ -20,13 +21,18 @@ export const routers = [
     layout: BlogLayout,
   },
   {
-    path:"/:topic/post/:blogName",
-    component:PostPage,
-    layout:BlogLayout
+    path: "/:topic/post/:blogName",
+    component: PostPage,
+    layout: BlogLayout,
   },
   {
-    path:"/introduce",
-    component:IntroducePage,
-    layout: IntroduceLayout
-  }
+    path: "/introduce",
+    component: IntroducePage,
+    layout: IntroduceLayout,
+  },
+  {
+    path: "/member",
+    component: Member,
+    layout: BlogLayout,
+  },
 ];

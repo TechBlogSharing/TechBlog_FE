@@ -1,12 +1,32 @@
-# React + Vite
+# TechBlog 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Trang web blog cá nhân nhằm mục tiêu lưu trữ các bài viết, nghiên cứu hữu ích trong lĩnh vực lập trình và công nghệ cùng với đó là luyện tập kỹ năng lập trình và xây dựng giao diện qua việc sử dụng các công nghệ như React và TailwindCSS.
 
-Currently, two official plugins are available:
+Link Website: https://techblogsharing.github.io
+# Mục tiêu kỹ thuật
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Thực hành xây dựng giao diện bằng các công nghệ như ReactJS và TailwindCSS
+- Sử dụng Github Repository như một nơi để lưu trữ dữ liệu theo hướng tiếp cận file nhằm giảm chi phí triễn khai
+- Xây dựng thành trang web tĩnh và triễn khai bằng Github Page
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+# Installation
+1. clone the repo
+```bash
+https://github.com/TechBlogSharing/TechBlog_FE
+cd TechBlog_Fe
+```
+2. Install dependencies
+```bash
+npm install
+```
+3. Run the project
+```bash
+npm run dev
+```
+# SCREENSHOTS
+## Home Page
+![Home page](/images/homepage.png)
+## Blogs Page
+![Blogs page](/images/blogpage.png)
+## Posts Page
+![Posts page](/images/postpage.png)

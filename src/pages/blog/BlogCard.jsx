@@ -16,7 +16,7 @@ export default function BlogCard({ topic, title }) {
           alt="Thumnail"
         />
       </div>
-      <div className="flex flex-col gap-[10px] py-[10px] h-[240px] ">
+      <div className="flex flex-col gap-[10px] py-[10px] max-h-[240px] ">
         <h1 className="text-[25px] font-[700]">{title}</h1>
         <p className="text-[18px] overflow-hidden text-ellipsis" >{meta?.description}</p>
       </div>
