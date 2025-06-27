@@ -97,9 +97,11 @@ export default function Post() {
           remarkPlugins={[remarkGfm]}
           className="p-[20px]"
           urlTransform={(url) => {
-            if (url.startsWith("/image"))
+            if (!url.startsWith("http")) {
               return `${base_url}/${topic}/${blogName}/${url}`;
-            else return url;
+            } else {
+              return url;
+            }
           }}
           rehypeRewrite={(node, index, parent) => {
             if (

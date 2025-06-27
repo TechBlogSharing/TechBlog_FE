@@ -12,7 +12,6 @@ export default function Content() {
         if (response.ok) return json;
       })
       .then((json) => {
-        console.log(json)
         setBlogs(json.tree);
       })
       .catch((e) => console.log(e));

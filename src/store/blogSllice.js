@@ -1,11 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { fetchCategories } from "../utils"
-
+// import { fetchCategories } from "../utils"
 
 const initialState = {
     showScrollTop: false,
     theme: localStorage.getItem('theme') ?? "light",
-    categories: await fetchCategories(),
+    categories: [],
     selectedCategory: localStorage.getItem('selectedCategory') || 0
 }
 
