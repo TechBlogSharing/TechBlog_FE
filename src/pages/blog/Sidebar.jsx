@@ -1,10 +1,10 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setSelectedCategory } from "../../store/blogSllice";
 import { useScrollStiky } from "../../hooks/useScrollSticky";
-
-const categories = ["Blog", "Dev", "Product Management", "UX Design"];
+import { capitalizeFirstLetter } from "../../utils";
+// const categories = ["Blog", "Dev", "Product Management", "UX Design"];
 export default function Sidebar() {
-  const selectedCategory = useSelector((state) => state.blog.selectedCategory);
+  const { selectedCategory, categories } = useSelector((state) => state.blog);
   const theme = useSelector((state) => state.blog.theme);
   const dispatch = useDispatch();
   const itemRef = useScrollStiky(85);
@@ -12,7 +12,7 @@ export default function Sidebar() {
   return (
     <div className="w-[350px] py-[20px] px-[20px]">
       <div className="w-[300px] top-[95px] mr-[10px]" ref={itemRef}>
-        {categories.map((category, index) => {
+        {categories?.map((category, index) => {
           return (
             <div
               key={index}
@@ -25,7 +25,7 @@ export default function Sidebar() {
               } cursor-pointer font-[600]`}
               onClick={() => dispatch(setSelectedCategory(index))}
             >
-              {category}
+              {capitalizeFirstLetter(category.path)}
             </div>
           );
         })}

@@ -20,7 +20,7 @@ export const routers = [
     layout: BlogLayout,
   },
   {
-    path:"/post",
+    path:"/:topic/post/:blogName",
     component:PostPage,
     layout:BlogLayout
   },

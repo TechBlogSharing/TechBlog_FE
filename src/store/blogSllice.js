@@ -1,10 +1,12 @@
 import { createSlice } from "@reduxjs/toolkit"
+import { fetchCategories } from "../utils"
 
 
 const initialState = {
     showScrollTop: false,
     theme: localStorage.getItem('theme') ?? "light",
-    selectedCategory: 0
+    categories: await fetchCategories(),
+    selectedCategory: localStorage.getItem('selectedCategory') || 0
 }
 
 export const blogSlice = createSlice({
@@ -20,8 +22,12 @@ export const blogSlice = createSlice({
         },
         setSelectedCategory: (state,action) => {
             state.selectedCategory = action.payload
+            localStorage.setItem('selectedCategory',action.payload)
+        },
+        setCategoies: (state,action) => {
+            state.categories = action.payload
         }
     },
 })
-export const {setShowScrollTop, setTheme, setSelectedCategory} = blogSlice.actions
+export const {setShowScrollTop, setTheme, setSelectedCategory, setCategoies} = blogSlice.actions
 export default blogSlice.reducer
