@@ -1,6 +1,7 @@
-import ronaldo from "../../assets/ronaldo.webp";
+import member from "../../assets/member.jpg";
+import knowledge from "../../assets/knowledge.png"
 import Card from "../../components/CardAtHome";
-import ronaldoCard from "../../assets/ronaldoCard.jpg";
+import aboutMe from "../../assets/aboutme.png";
 import { NavLink } from "react-router";
 
 export default function HomePage() {
@@ -45,7 +46,7 @@ export default function HomePage() {
           </div>
           <div className="animate-wiggle">
             <img
-              src={ronaldo}
+              src="https://scontent.fdad3-5.fna.fbcdn.net/v/t39.30808-6/509423606_122185598738303680_2683980747459256565_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGBrWEsb7wN-sS-HFcKA9D9oDRp17CWxN6gNGnXsJbE3gfHyUEnEc_b_w5x9XnWTymjVldUFJguAz-1jjeXZyFK&_nc_ohc=E58ZfACCRlsQ7kNvwGDij_E&_nc_oc=Adnr_-B31MA5V7p0INnhmfjWUadG3_vexeyE01I0JrenlIc4Yz5TK2Baxw3oCwX-3tM&_nc_zt=23&_nc_ht=scontent.fdad3-5.fna&_nc_gid=kFq-7oIfn0og_y0-N0we6A&oh=00_AfNx13dUXYZQOmtge9pGED_0D6_cvXTrj2XFxgD2eUF-NQ&oe=68646B74"
               className=" perspective(1000px) w-[600px] h-[300px] rounded-lg mt-[50px] mr-[50px] shadow-2xl object-cover
               transform transition-transform duration-600 skew-y-0 hover:-skew-y-2 "
             />
@@ -64,14 +65,14 @@ export default function HomePage() {
 
         <div className="animate-fadeUp flex gap-[50px] mr-[20px] ml-[20px] mt-[50px] justify-center">
           <Card
-            img={ronaldoCard}
+            img={knowledge}
             title={title1}
             body={body1}
             but={but1}
             url={url1}
           />
-          <Card img={ronaldoCard} title={title2} body={body2} but={but2} url={url2} />
-          <Card img={ronaldoCard} title={title3} body={body3} but={but3} url={url3} />
+          <Card img={member} title={title2} body={body2} but={but2} url={url2} />
+          <Card img={aboutMe} title={title3} body={body3} but={but3} url={url3} />
         </div>
       </div>
     </>

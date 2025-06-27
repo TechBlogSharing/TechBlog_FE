@@ -48,22 +48,16 @@ export default function Footer({ next, previous }) {
           </div>
           <div className="flex gap-[20px] mr-[20px]">
             <a
-              href=""
+              href="https://github.com/TechBlogSharing"
               className="opacity-70 hover:opacity-100 transition-opacity duration-200"
             >
               <FaGithub />
             </a>
             <a
-              href=""
+              href="https://www.facebook.com/profile.php?id=61559110400483"
               className="opacity-70 hover:opacity-100 transition-opacity duration-200"
             >
               <FaFacebook />
-            </a>
-            <a
-              href=""
-              className="opacity-70 hover:opacity-100 transition-opacity duration-200"
-            >
-              <SiGmail />
             </a>
           </div>
         </div>
