@@ -13,7 +13,7 @@ export default function ProfileCard({info}) {
               className="w-[150px] h-[150px] rounded-[50%] object-cover border-[3px] border-[#0f6cbf]"
             />
           </div>
-          <div className="flex items-center justify-center p-[10px] gap-[10px]">
+          <div className="flex items-center justify-center p-[10px] gap-[15px]">
             <a href={info?.facebook}>
               <FaFacebook size={35} color="#1877F2" />
             </a>

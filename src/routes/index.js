@@ -8,6 +8,7 @@ import HomePage from "../pages/home/Home";
 import PostPage from "../pages/post/PostPage";
 import IntroducePage from "../pages/introduce/Introduce";
 import Member from "../pages/member/Member";
+import MemberLayout from "../layouts/MemberLayout";
 
 export const routers = [
   {
@@ -33,6 +34,6 @@ export const routers = [
   {
     path: "/member",
     component: Member,
-    layout: BlogLayout,
+    layout: MemberLayout,
   },
 ];

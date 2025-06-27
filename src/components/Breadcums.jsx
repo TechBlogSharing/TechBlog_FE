@@ -15,7 +15,7 @@ const links = [
     path: "/member",
   },
   {
-    label: "About me",
+    label: "About us",
     path: "/introduce"
   }
 ];
