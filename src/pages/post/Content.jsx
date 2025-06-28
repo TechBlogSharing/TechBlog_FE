@@ -19,12 +19,12 @@ export default function Content() {
       });
   }, [categories, selectedCategory]);
   return (
-    <div className=" w-[calc(100%-650px)]">
+    <div className=" w-[calc(100%-650px)] ">
       <MarkdownPreview
         source={content}
         rehypePlugins={[rehypeRaw]}
         remarkPlugins={[remarkGfm]}
-        className="p-[20px] flex flex-col"
+        className="p-[20px] text-wrap"
         urlTransform={(url) => {
           if (!url.startsWith("http")) {
             return `${base_url}/${topic}/${blogName}/${url}`;
