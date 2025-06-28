@@ -1,40 +1,33 @@
-import { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
 import MarkdownPreview from "@uiw/react-markdown-preview";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
-import { useScrollTop } from "../../hooks/useScrollTop";
-export default function Introduce() {
+import { useState, useEffect } from "react";
+import { useParams } from "react-router";
+import { useSelector } from "react-redux";
+const base_url =
+  "https://raw.githubusercontent.com/TechBlogSharing/TechBlog_DB/main/topics";
+export default function Content() {
   const [content, setContent] = useState("");
-  const theme = useSelector((state) => state.blog.theme);
-  useScrollTop();
+  const { blogName, topic } = useParams();
+
+  const { categories, selectedCategory } = useSelector((state) => state.blog);
   useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/TechBlogSharing/TechBlog_FE/main/README.md"
-    )
+    fetch(`${base_url}/${topic}/${blogName}/index.md`)
       .then((res) => res.text())
       .then((text) => {
         setContent(text);
       });
-  }, []);
-
-  useEffect(() => {
-    document.documentElement.setAttribute(
-      "data-color-mode",
-      theme === "light" ? "light" : "dark"
-    );
-  }, [theme]);
-
+  }, [categories, selectedCategory]);
   return (
-    <div className="p-[20px]">
+    <div className=" w-[calc(100%-650px)]">
       <MarkdownPreview
         source={content}
         rehypePlugins={[rehypeRaw]}
         remarkPlugins={[remarkGfm]}
-        className="p-[20px]"
+        className="p-[20px] flex flex-col"
         urlTransform={(url) => {
           if (!url.startsWith("http")) {
-            return `https://raw.githubusercontent.com/TechBlogSharing/TechBlog_FE/main/${url}`;
+            return `${base_url}/${topic}/${blogName}/${url}`;
           } else {
             return url;
           }

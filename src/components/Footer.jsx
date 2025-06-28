@@ -10,7 +10,7 @@ import { NavLink } from "react-router";
 export default function Footer({ next, previous }) {
   return (
     <>
-      <footer className="text-white">
+      <footer className="text-white relative z-1000">
         <nav className="bg-[#303030] flex justify-between py-6 ">
           {previous ? (
             <NavLink to={previous.url}

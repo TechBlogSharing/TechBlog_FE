@@ -18,7 +18,7 @@ export default function Member() {
   }, []);
 
   return (
-    <div className={`${theme === "dark" ? darkTheme : lightTheme} h-[calc(100vh-170px)] grid grid-cols-2 p-[40px] gap-[30px]`}>
+    <div className={`${theme === "dark" ? darkTheme : lightTheme} h-[100%] grid grid-cols-2 px-[40px] py-[60px] gap-[35px]`}>
       {members.map((member, index) => (
         <ProfileCard key={index} info={member} />
       ))}
