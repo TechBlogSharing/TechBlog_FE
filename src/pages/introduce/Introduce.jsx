@@ -26,12 +26,12 @@ export default function Introduce() {
   }, [theme]);
 
   return (
-    <div className="p-[20px]">
+    <div >
       <MarkdownPreview
         source={content}
         rehypePlugins={[rehypeRaw]}
         remarkPlugins={[remarkGfm]}
-        className="p-[20px]"
+        className="p-[40px]"
         urlTransform={(url) => {
           if (!url.startsWith("http")) {
             return `https://raw.githubusercontent.com/TechBlogSharing/TechBlog_FE/main/${url}`;

@@ -7,7 +7,7 @@ import { NavLink } from "react-router";
 export default function HomePage() {
   const title1 = "Knowledge Sharing";
   const title2 = "Members";
-  const title3 = "About me";
+  const title3 = "About us";
   const body1 = "";
   const body2 ="";
   const body3 = "";
