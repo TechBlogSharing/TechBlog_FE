@@ -10,7 +10,7 @@ export default function Card({
         <div className="w-[400px] h-[400px] overflow-hidden rounded-t-lg">
           <img
             src={img}
-            className="w-full h-full object-cover transform transition-transform duration-600 group-hover:scale-105 cursor-pointer"
+            className="w-full h-full  transform transition-transform duration-600 group-hover:scale-105 cursor-pointer"
           />
         </div>
 
